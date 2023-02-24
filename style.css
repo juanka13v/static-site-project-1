@@ -1,0 +1,274 @@
+:root {
+  --main-color: #73b385;
+  --second-color: #e5e5e5;
+
+  --second-hover: #d4cfcf;
+
+  --black: #202124;
+  --black-text: #808080;
+  --white: #ffffff;
+
+  --title-font: "Montserrat", sans-serif;
+  --text-font: "Open Sans", sans-serif;
+
+  --breakpoint-small: 576px;
+  --breakpoint-medium: 768px;
+  --breakpoint-large: 992px;
+  --breakpoint-xlarge: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* Restablecer estilos de enlaces */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Restablecer estilos de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Restablecer estilos de imágenes */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------ COMPONENTS ------ */
+
+.btn {
+  font-family: var(--text-font);
+  border-style: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-image: none;
+  letter-spacing: 1px;
+  text-transform: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.btn-gray {
+  background-color: var(--second-color);
+  color: var(--black);
+}
+
+.btn.btn-green {
+  background-color: var(--main-color);
+  color: var(--white);
+}
+
+.btn.btn-green:hover {
+  background-color: var(--black);
+}
+
+.btn.btn-gray:hover {
+  background-color: var(--second-hover);
+}
+
+/* ------ MAIN CONTENT ------ */
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+main .main__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 5rem;
+}
+
+main .main__content h1 {
+  color: var(--black);
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.1;
+  font-family: var(--title-font);
+}
+
+main .main__content h1 span {
+  color: var(--main-color);
+}
+
+main .main__content .buttons {
+  display: flex;
+  gap: 2rem;
+}
+
+main .main__img {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------ SERVICES SECTION ------ */
+
+.services {
+  max-width: 1200px;
+  padding: 3rem 4rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.services h2 {
+  font-size: 3.8rem;
+  font-family: var(--title-font);
+  color: var(--black);
+  text-align: start;
+}
+
+.services h2 span {
+  color: var(--main-color);
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.services .container .card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.services .container .card i {
+  text-align: center;
+  font-size: 5rem;
+  color: var(--main-color);
+}
+
+.services .container .card h3 {
+  color: var(--black);
+  font-family: var(--title-font);
+  font-size: 2.5rem;
+}
+
+.services .container .card p {
+  font-family: var(--text-font);
+  color: var(--black-text);
+  font-weight: 400;
+}
+
+/* ------ RESPONSIVE DESING ------ */
+
+@media screen and (max-width: 992px) {
+  body {
+    /* background-color: red; */
+  }
+
+  main {
+    min-height: 100vh;
+  }
+
+  main .main__content {
+    padding: 0;
+  }
+
+  main .main__content h1 {
+    font-size: 5rem;
+  }
+
+  main .main__img img {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* body {
+    background-color: red;
+  } */
+
+  main {
+    flex-direction: column-reverse;
+  }
+
+  main .main__content {
+    gap: 4rem;
+    justify-content: flex-start;
+  }
+
+  main .main__img img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .services .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  body {
+    /* background-color: red; */
+  }
+
+  .services {
+    padding: 4rem 2rem;
+  }
+
+  .services h2 {
+    font-size: 2.5rem;
+  }
+
+  .services .container {
+    grid-template-columns: 1fr;
+  }
+
+  .services .container .card i {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    /* background-color: blue; */
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  main .main__content h1 {
+    font-size: 3.2rem;
+  }
+
+  main .main__img img {
+    width: 200px;
+    height: 200px;
+  }
+}
