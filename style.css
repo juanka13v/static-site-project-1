@@ -561,10 +561,8 @@ main .main__img {
 
 .team .container .card img{
   margin: 0 auto;
-  width: 250px;
-  height: 250px;
+  height: 300px;
   background-size: cover;
-  
 }
 
 .team {
@@ -574,6 +572,114 @@ main .main__img {
   text-align: center;
   font-size: 2rem;
 }
+
+/* ------ CONTACT DESING ------ */
+
+.contact {
+  background: var(--background-color);
+  width: 100%;
+}
+
+.contact .wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 6rem 4rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.contact .wrapper .container-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.contact .wrapper .container-form h1 {
+  font-size: 4.5rem;
+  font-family: var(--title-font);
+  color: var(--black);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.contact .wrapper .container-form h1 span {
+  color: var(--main-color);
+}
+
+.contact .wrapper .container-form h3 {
+  font-weight: 2rem;
+  color: var(--black-text);
+  font-family: var(--text-font);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+.contact .wrapper .container-form form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.contact .wrapper .container-form form div {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.contact .wrapper .container-form form div label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--title-font);
+}
+
+.contact .wrapper .container-form form div input {
+  font-size: 2rem;
+  padding: 10px 12px;
+  font-family: var(--text-font);
+  color: var(--black-text);
+  border: none;
+}
+
+.contact .wrapper .container-form form div input:scope {
+  outline: 1px solid var(--black);
+}
+
+.contact .wrapper .content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact .wrapper .content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.contact .wrapper .content h1 {
+  color: var(--black);
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.contact .wrapper .content h3 {
+  color: var(--black);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.contact .wrapper .content p {
+  color: var(--black-text);
+  font-family: var(--text-font);
+  font-weight: 400;
+  font-size: 2rem;
+}
+
 
 
 /* ------ RESPONSIVE DESING ------ */
@@ -685,6 +791,10 @@ main .main__img {
   .questions .wrapper h1 {
     font-size: 3.5rem;
   }
+
+  .contact .wrapper  {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 568px) {
@@ -768,6 +878,10 @@ main .main__img {
   .team .container {
     grid-template-columns: 1fr;
   }
+
+  .contact .wrapper {
+    padding: 6rem 2rem;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -816,5 +930,13 @@ main .main__img {
   .questions .wrapper .container .acordeon details summary {
     font-size: 1.8rem;
     padding: 1rem;
+  }
+
+  .contact .wrapper .container-form form {
+    padding: 0;
+  }
+
+  .contact .wrapper .container-form form h1 {
+    font-size: 3rem;
   }
 }
